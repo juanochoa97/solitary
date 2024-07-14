@@ -51,7 +51,6 @@ function loadProducts(listId) {
     });
 }
 
-
 function editProduct(productId) {
     const product = products.find(p => p.id === productId);
     if (product) {
@@ -82,17 +81,12 @@ const cart = [];
 function addToCart(product) {
     const existingItem = cart.find(item => item.product.id === product.id);
     if (existingItem) {
-        if (existingItem.quantity < product.stock) {
-            existingItem.quantity++;
-        } else {
-            alert('No hay suficiente stock disponible para este producto.');
-        }
+        existingItem.quantity++;
     } else {
         cart.push({ product, quantity: 1 });
     }
     loadCart();
 }
-
 
 function loadCart() {
     const cartList = document.getElementById('cart-list');
@@ -113,24 +107,17 @@ function confirmPurchase() {
     cart.forEach(item => {
         const product = products.find(p => p.id === item.product.id);
         if (product) {
-            if (item.quantity <= product.stock) {
-                product.stock -= item.quantity;
-                sales.push({
-                    id: sales.length + 1,
-                    productName: product.name,
-                    quantity: item.quantity,
-                    total: product.price * item.quantity
-                });
-            } else {
-                alert(`No hay suficiente stock disponible para ${product.name}.`);
-            }
+            product.stock -= item.quantity;
+            sales.push({
+                id: sales.length + 1,
+                productName: product.name,
+                quantity: item.quantity,
+                total: product.price * item.quantity
+            });
         }
     });
-
-    cart.length = 0; // Vaciar carrito después de la compra
-    loadProducts('product-list-admin'); // Actualizar productos en la sección de administrador
-    loadProducts('product-list-client'); // Actualizar productos en la sección de cliente
-    loadCart(); // Actualizar carrito
-    loadSales(); // Actualizar lista de ventas
+    cart.length = 0;
+    loadProducts('product-list-client');
+    loadCart();
+    loadSales();
 }
-
