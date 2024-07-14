@@ -1,128 +1,52 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The british pub the england bar</title>
-    <LINK REL=StyleSheet HREF="./Css/Style.css" TYPE="text/css" MEDIA="screen">
+    <title>Administrar Tienda</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body onload="mostrar('inicio')">
+<body>
     <header>
-        <img src="./Imagenes/429742833_1090564595585497_5483885830222932691_n.jpg" alt="Imagen 3"width="100%" height="auto" >
+        <h1>Administrar Tienda</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('add-product')">Agregar Producto</a></li>
+                <li><a href="#" onclick="showSection('view-products-admin')">Ver Productos (Admin)</a></li>
+                <li><a href="#" onclick="showSection('view-sales')">Ver Ventas</a></li>
+                <li><a href="#" onclick="showSection('view-products-client')">Ver Productos (Cliente)</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li onclick="mostrar('inicio')"><a href="#">Inicio</a></li>
-            <li onclick="mostrar('productos')"><a href="#">Productos</a></li>
-            <li onclick="mostrar('contacto')"><a href="#">Contacto</a></li>
-        </ul>
-    </nav>  
-    <section id="inicio">
-        <h2>Bienvenido al Bar de Rock "Nombre del Bar"</h2>
-        <p>Somos un bar temático dedicado a los amantes del rock. Aquí podrás disfrutar de buena música, ambiente auténtico y deliciosas bebidas.</p>
-        <p>¡Ven y únete a la fiesta!</p><br>
-        <h2>Sobre Nosotros</h2>
-        <p>Somos un equipo apasionado por el rock que decidió crear un espacio único para compartir nuestra pasión con otros aficionados.</p>
-        <p>Nuestro objetivo es ofrecer una experiencia inigualable a nuestros clientes, combinando la mejor música con un ambiente acogedor y amistoso.</p>
-
-        <div class="slider">
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
-            <div class="slides">
-                <div class="slide"><img src="./Imagenes/33580876_10211509459112220_7176069140984102912_n.jpg" alt="Imagen 1"></div>
-                <div class="slide"><img src="./Imagenes/429684427_1090565195585437_1580322450370739499_n.jpg" alt="Imagen 2"></div>
-                <div class="slide"><img src="./Imagenes/429678556_1093544095287547_7810351968198970283_n.jpg" alt="Imagen 3"></div>
-                <div class="slide"><img src="./Imagenes/428649741_1090565838918706_2725983282405013135_n.jpg" alt="Imagen 4"></div>    
-            </div>
-        </div>
-    </section>
-    <section id="productos" class="productos">
-        <h2>Producots</h2>
-        <div class="mosaic-container">
-            <div class="product">
-              <img src="./Imagenes/poker.jpg" alt="Producto 1">
-              <h3>Cerveza poker</h3>
-              <p>Precio: $5000</p>
-            </div>
-            <div class="product">
-              <img src="./Imagenes/media nectar.jpg" alt="Producto 2">
-              <h3>1/2 Aguardiente nectar</h3>
-              <p>Precio: $70000</p>
-            </div>
-            <div class="product">
-              <img src="./Imagenes/jackdaniels.jpg" alt="Producto 3">
-              <h3>Jack Daniels</h3>
-              <p>Precio: $70000</p>
-            </div>
-            <div class="product">
-              <img src="./Imagenes/jackdaniels honey.jpg" alt="Producto 4">
-              <h3>jack daniels honey</h3>
-              <p>Precio: $70000</p>
-            </div>
-            <div class="product">
-              <img src="./Imagenes/jackdaniels fire.jpg" alt="Producto 5">
-              <h3>Jack daniels fire</h3>
-              <p>Precio: $70000</p>
-            </div>
-            <div class="product">
-              <img src="./Imagenes/jose cuervo.jpg" alt="Producto 6">
-                <h3>Jose cuervo</h3>
-                <p>Precio: $5000</p>
-            </div>
-              <div class="product">
-                <img src="./Imagenes/absolut.jpg" alt="Producto 7">
-                <h3>Absolut</h3>
-                <p>Precio: $70000</p>
-              </div>
-              <div class="product">
-                <img src="./Imagenes/aguila.jpg" alt="Producto 8">
-                <h3>Cerveza aguila</h3>
-                <p>Precio: $70000</p>
-              </div>
-              <div class="product">
-                <img src="./Imagenes/budwaiser.jpg" alt="Producto 9">
-                <h3>Cerveza budweiser</h3>
-                <p>Precio: $70000</p>
-              </div>
-              <div class="product">
-                <img src="./Imagenes/corona.jpg" alt="Producto 10">
-                <hh312>Corona</h3>
-                <p>Precio: $70000</p>
-              </div>
-              <div class="product">
-                <img src="./Imagenes/club dorada.jpg" alt="Producto 11">
-                <h3>Club dorada</h3>
-                <p>Precio: $70000</p>
-              </div>
-              <div class="product">
-                <img src="./Imagenes/descarga (1).jpg" alt="Producto 12">
-                <h3>Club negra</h3>
-                <p>Precio: $70000</p>
-              </div>
-              <div class="product">
-                <img src="./Imagenes/descarga.jpg" alt="Producto 13">
-                <h3>Club roja</h3>
-                <p>Precio: $70000</p>
-              </div>
-              <div class="product">
-                <img src="./Imagenes/cigarrillos.jpg" alt="Producto 14">
-                <h3>Cigarrillos</h3>
-                <p>Precio: $70000</p>
-              </div>
-    </section>
-    <section id="contacto">
-        <h1>Contacto</h1>
-        <p>Estamos ubicados en:  LOS PORTICOS CENTRO COMERCIAL </p>
-        <p>Dirección: Cra. 92 #147B-35, Suba, Bogotá</p>
-        <p>Teléfono: [Insertar teléfono]</p>
-        <p>Email: [Insertar email]</p>  
-        <a href="https://www.facebook.com/britishpub.englandbar.5" target="_blank">Visitar nuestra página de Facebook</a><br>
-        <h1>Ubicación</h1>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15904.639630068681!2d-74.084512!3d4.7422578!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f84f967648c43%3A0x7e6c403e8e73b326!2sLOS%20PORTICOS!5e0!3m2!1ses!2sco!4v1710989800098!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-    <footer>
-        <p>© 2024 The british pub the england bar. Todos los derechos reservados a Juan Sebastian Ochoa Ramirez.</p>
-    </footer>
-    <script src="./Js/script.js"></script>
+    <main>
+        <section id="add-product">
+            <h2>Agregar Producto</h2>
+            <form id="add-product-form">
+                <label>Nombre:</label>
+                <input type="text" id="product-name" required>
+                <label>Precio:</label>
+                <input type="number" id="product-price" required>
+                <label>Descripción:</label>
+                <textarea id="product-description" required></textarea>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+        <section id="view-products-admin">
+            <h2>Productos</h2>
+            <ul id="product-list-admin"></ul>
+        </section>
+        <section id="view-sales">
+            <h2>Ventas Realizadas</h2>
+            <ul id="sales-list"></ul>
+        </section>
+        <section id="view-products-client">
+            <h2>Productos Disponibles</h2>
+            <ul id="product-list-client"></ul>
+            <h2>Carrito</h2>
+            <ul id="cart-list"></ul>
+        </section>
+    </main>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
