@@ -161,3 +161,15 @@ button.confirm {
 	button.confirm:hover {
 		background-color: #007bb5;
 	}
+.admin-section {
+	display: none;
+}
+
+#admin-nav {
+	display: none;
+}
+
+#client-nav {
+	display: none;
+}
+

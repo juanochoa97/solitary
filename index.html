@@ -9,17 +9,33 @@
 <body>
     <header>
         <h1>Administrar Tienda</h1>
-        <nav>
+        <nav id="admin-nav">
             <ul>
                 <li><a href="#" onclick="showSection('add-product')">Agregar Producto</a></li>
                 <li><a href="#" onclick="showSection('view-products-admin')">Ver Productos (Admin)</a></li>
                 <li><a href="#" onclick="showSection('view-sales')">Ver Ventas</a></li>
+                <li><a href="#" onclick="logout()">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+        <nav id="client-nav">
+            <ul>
                 <li><a href="#" onclick="showSection('view-products-client')">Ver Productos (Cliente)</a></li>
+                <li><a href="#" onclick="showSection('login-section')">Iniciar Sesión</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="add-product">
+        <section id="login-section">
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <label>Usuario:</label>
+                <input type="text" id="username" required>
+                <label>Contraseña:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </section>
+        <section id="add-product" class="admin-section">
             <h2>Agregar Producto</h2>
             <form id="add-product-form">
                 <label>Nombre:</label>
@@ -31,11 +47,11 @@
                 <button type="submit">Agregar</button>
             </form>
         </section>
-        <section id="view-products-admin">
+        <section id="view-products-admin" class="admin-section">
             <h2>Productos</h2>
             <ul id="product-list-admin"></ul>
         </section>
-        <section id="view-sales">
+        <section id="view-sales" class="admin-section">
             <h2>Ventas Realizadas</h2>
             <ul id="sales-list"></ul>
         </section>
@@ -46,9 +62,9 @@
             <ul id="cart-list" class="cart-list"></ul>
             <button class="confirm" onclick="confirmPurchase()">Confirmar Compra</button>
         </section>
-
     </main>
     <script src="scripts/data.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/auth.js"></script>
 </body>
 </html>
